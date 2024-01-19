@@ -1,19 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Here we Go again</title>
     <style>
-        h1{
+        h1 {
             color: burlywood;
+        }
+        .mainContent {
+            padding-left: 500px;
+            padding-right: 500px;
+        }
+        .positionRelative {
+            position: relative;
+            height: 100px;
+            background-color: cornflowerblue;
+            padding-top: 100px;
+        }
+        .positionFixed {
+            position: fixed;
+            text-align: center;
+            justify-content: center;
+            background-color: beige;
+            height: 70px;
+            width: 200px;
+            padding-top: 50px;
+        }
+        .positionAbsolute {
+            position: absolute;
+            right: -30px;
+            bottom: 0px;
+            height: 50px;
+            width: 200px;
+            text-align: center;
+            padding-top: 90px;
+            background-color: darkgrey;
+        }
+        p {
+            font-size: 18px;
         }
     </style>
 </head>
+
 <body>
-    <h1>Lets Go!</h1>
-    <p>Hello World!</p>
-    
+    <div class="positionFixed"> Position Fixed</div>
+    <div class="mainContent">
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+        </p>
+        <div class="positionRelative">Position: Relative
+            <div class="positionAbsolute">
+                Position Absolute
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+        </p>
+    </div>
 </body>
+
+</body>
+
 </html>
