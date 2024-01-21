@@ -8,7 +8,9 @@
     <title>Here we Go again</title>
     <style>
         h1 {
-            color: burlywood;
+            padding-top: 50px;
+            color: black;
+            font-size: 42px;
         }
         .mainContent {
             padding-left: 500px;
@@ -16,19 +18,20 @@
         }
         .positionRelative {
             position: relative;
-            height: 100px;
             background-color: #EEEEEE;
-            padding-top: 100px;
+            padding-top: 20px;
+            padding-bottom: 150px;
             text-align: center;
+            font-size: 22px;
         }
         .positionFixed {
             position: fixed;
             text-align: center;
             justify-content: center;
             background-color: #EEEEEE;
-            height: 70px;
             width: 200px;
             padding-top: 50px;
+            padding-bottom: 50px;
             font-size: 22px;
             font-family:Arial, Helvetica, sans-serif;
         }
@@ -36,20 +39,24 @@
             position: absolute;
             right: -30px;
             bottom: 0px;
-            width: 200px;
+            width: 300px;
             text-align: center;
-            padding-top: 40px;
+            padding-top: 30px;
+            padding-bottom: 30px;
             background-color: darkgrey;
             font-size: 22px;
         }
         p {
-            font-size: 18px;
+            font-size: 22px;
+            line-height: 1.5em;
         }
     </style>
 </head>
 
 <body>
-    <div class="positionFixed"> Position Fixed</div>
+    <div class="positionFixed"> <span>&#60;</span> Div <span>&#62;</span> <br>
+        Position Fixed
+    </div>
     <div class="mainContent">
         <h1>Heading</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -59,7 +66,8 @@
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
             laborum.
         </p>
-        <div class="positionRelative">Position: Relative
+        <div class="positionRelative"> <span>&#60;</span> Div <span>&#62;</span> <br>
+            Position: Relative
             <div class="positionAbsolute">
                 <span>&#60;</span> Div <span>&#62;</span> <br>
                 Position: Absolute
