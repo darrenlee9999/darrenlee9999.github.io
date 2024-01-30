@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here we Go again</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Lora&family=Moirai+One&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        h1 {
+            padding-top: 50px;
+            color: black;
+            font-size: 42px;
+        }
+
+        .mainContent {
+            padding-left: 500px;
+            padding-right: 500px;
+        }
+
+        .positionRelative {
+            position: relative;
+            background-color: #EEEEEE;
+            padding-top: 20px;
+            padding-bottom: 150px;
+            text-align: center;
+            font-size: 22px;
+            font-family: 'Moirai One', system-ui;
+        }
+
+        .positionFixed {
+            position: fixed;
+            text-align: center;
+            justify-content: center;
+            background-color: #EEEEEE;
+            width: 200px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            font-size: 22px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .positionAbsolute {
+            position: absolute;
+            right: -30px;
+            bottom: 0px;
+            width: 300px;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: darkgrey;
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 1.5em;
+            font-family: 'Lora', serif;
+            font-weight: 400;
+        }
+
+        .button1 {
+            color: black;
+            font-size: 22px;
+        }
+
+        .button1:hover {
+            color: blueviolet;
+        }
+
+        .button1:focus {
+            color: yellow;
+        }
+
+        .button1:active {
+            color: red;
+        }
+
+        .button2 {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgb(145, 92, 182);
+            padding: 15px 40px;
+            border-radius: 4px;
+            font-weight: normal;
+            font-size: 22px;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .button2:hover {
+            color: rgba(255, 255, 255, 1);
+            box-shadow: 0 5px 30px rgba(145, 92, 182, .8);
+            background-color: rgba(45, 19, 192, 0.8);
+        }
+
+        .button2:focus {
+            color: rgba(255, 255, 255, 1);
+            background: rgba(163, 219, 73, 0.8);
+        }
+
+        .button2:active {
+            color: red;
+            box-shadow: 10px 10px 20px rgba(192, 19, 27, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="positionFixed"> <span>&#60;</span> Div <span>&#62;</span> <br>
+        Position Fixed
+    </div>
+    <div class="mainContent">
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+        </p>
+        <div class="positionRelative"> <span>&#60;</span> Div <span>&#62;</span> <br>
+            Position: Relative
+            <div class="positionAbsolute">
+                <span>&#60;</span> Div <span>&#62;</span> <br>
+                Position: Absolute
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+        </p>
+        <button class="button1">Click Me</button>
+        <button class="button2">Hello</button>
+        <button></button>
+        <br><br><br>
+
+        <header class="p-3 text-bg-dark">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    </ul>
+
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                        <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                            aria-label="Search">
+                    </form>
+
+                    <div class="text-end">
+                        <button type="button" class="btn btn-outline-light me-2">Login</button>
+                        <button type="button" class="btn btn-warning">Sign-up</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+            <div class="row align-items-center g-lg-5 py-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Vertically centered hero sign-up form
+                    </h1>
+                    <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls.
+                        Each required form group has a validation state that can be triggered by attempting to submit
+                        the form without completing it.</p>
+                </div>
+                <div class="col-md-10 mx-auto col-lg-5">
+                    <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                        </div>
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                <hr class="my-4">
+                <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Free</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>10 users included</li>
+                    <li>2 GB of storage</li>
+                    <li>Email support</li>
+                    <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Pro</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>20 users included</li>
+                    <li>10 GB of storage</li>
+                    <li>Priority email support</li>
+                    <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                  <h4 class="my-0 fw-normal">Enterprise</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>30 users included</li>
+                    <li>15 GB of storage</li>
+                    <li>Phone and email support</li>
+                    <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                </div>
+              </div>
+            </div>
+          </div>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                            crossorigin="anonymous"></script>
+</body>
+
+</body>
+
+</html>
