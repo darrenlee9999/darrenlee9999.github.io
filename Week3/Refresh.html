@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+        var stringVar = "hello";
+        console.log(stringVar);
+
+        console.log("--------------")
+
+        var boolVar = true;
+        console.log(boolVar);
+
+        console.log("--------------")
+
+        var arrayVar = [1,'b',3, true, 'hi'];
+        console.log(arrayVar);
+
+        console.log("--------------")
+
+        for (let index = 0; index < arrayVar.length; index++) {
+            const loopedElement = arrayVar[index];
+            console.log(loopedElement);
+        }
+
+        console.log("--------------")
+
+        var objectVar = {
+            fname: "darren",
+            lname: "lee",
+            cars: ["Ford", "Lincoln", "Mitsubishi", "Honda", "Mercury"],
+        }
+        console.log(objectVar);
+
+        console.log("--------------")
+
+        console.log(objectVar.fname);
+
+        console.log("--------------")
+
+        document.onkeyup = function() {console.log(event.key)};
+    </script>
+</body>
+</html>

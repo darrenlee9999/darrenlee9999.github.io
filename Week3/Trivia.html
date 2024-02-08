@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Trivia</h1>
+    <div id="instructions">
+        Instructions: Press 's' to start then press 't' for true or press 'f' for false!
+    </div>
+    <div id="questions">
+
+    </div>
+    <div id="score">
+
+    </div>
+
+    <script>
+
+        var trivia = {
+            q1: ["Is this Question 1?", true],
+            q2: ["Is this Question 1?", false],
+            q3: ["Is this Question 3?", true],
+            q4: ["Is this Question 4?", true],
+            q5: ["Is this Question 5?", true],
+            q6: ["Is this Question 6?", true],
+            q7: ["Is this Question 7?", true],
+            q8: ["Is this Question 8?", true],
+            q9: ["Is this Question 9?", true],
+            q10: ["Is this Question 10?", true],
+        }
+
+        //Solution 1 Counter with Large If Statement
+        /*
+        var userScore = 0;
+        var questionCounter = 0;
+        document.onkeyup = function(){validation(event.key)};
+
+        function validation (e) {
+            let userKey = e.toLowerCase();
+            console.log(e);
+            if (userKey === "s" && questionCounter == 0) {
+                document.getElementById("questions").innerHTML = trivia.q1[0];
+                userScore = 0;
+                scoreTracker();
+            }
+            else if (userKey === "t") {
+                var userResponse = true;
+                questionReader(userResponse);
+            }
+            else if (userKey === "f") {
+                var userResponse = false;
+                questionReader(userResponse);
+            }
+        }
+
+        function scoreTracker () {
+            document.getElementById("score").innerHTML = "Your Score is " + userScore + " points.";
+        }
+        function questionReader (x) {
+            if (questionCounter == 0) {
+                if (x === trivia.q1[1]) {
+                    userScore += 1;
+                    questionCounter +=1;
+                    scoreTracker();
+                }
+                else {
+                    alert("wrong answer!");
+                    questionCounter += 1;
+                }
+                document.getElementById("questions").innerHTML = trivia.q2[0];
+            }
+            else if (questionCounter == 1) {
+                if (x === trivia.q2[1]) {
+                    userScore += 1;
+                    questionCounter +=1;
+                    scoreTracker();
+                }
+                else {
+                    alert("wrong answer!");
+                    questionCounter += 1;
+                }
+                document.getElementById("questions").innerHTML = trivia.q3[0];
+            }
+            else if (questionCounter == 2) {
+                if (x === trivia.q3[1]) {
+                    userScore += 1;
+                    questionCounter +=1;
+                    scoreTracker();
+                }
+                else {
+                    alert("wrong answer!");
+                    questionCounter += 1;
+                }
+                document.getElementById("questions").innerHTML = trivia.q4[0];
+            }
+            else if (questionCounter == 3) {
+                if (x === trivia.q4[1]) {
+                    userScore += 1;
+                    questionCounter +=1;
+                    scoreTracker();
+                }
+                else {
+                    alert("wrong answer!");
+                    questionCounter += 1;
+                }
+                document.getElementById("questions").innerHTML = trivia.q5[0];
+            }
+            else if (questionCounter == 4) {
+                if (x === trivia.q5[1]) {
+                    userScore += 1;
+                    questionCounter +=1;
+                    scoreTracker();
+                }
+                else {
+                    alert("wrong answer!");
+                    questionCounter += 1;
+                }
+                document.getElementById("questions").innerHTML = trivia.q6[0];
+            }
+            else if (questionCounter == 5) {
+                if (x === trivia.q6[1]) {
+                    userScore += 1;
+                    questionCounter +=1;
+                    scoreTracker();
+                }
+                else {
+                    alert("wrong answer!");
+                    questionCounter += 1;
+                }
+                document.getElementById("questions").innerHTML = trivia.q7[0];
+            }
+            else if (questionCounter == 6) {
+                if (x === trivia.q7[1]) {
+                    userScore += 1;
+                    questionCounter +=1;
+                    scoreTracker();
+                }
+                else {
+                    alert("wrong answer!");
+                    questionCounter += 1;
+                }
+                document.getElementById("questions").innerHTML = trivia.q8[0];
+            }
+            else if (questionCounter == 7) {
+                if (x === trivia.q8[1]) {
+                    userScore += 1;
+                    questionCounter +=1;
+                    scoreTracker();
+                }
+                else {
+                    alert("wrong answer!");
+                    questionCounter += 1;
+                }
+                document.getElementById("questions").innerHTML = trivia.q9[0];
+            }
+            else if (questionCounter == 8) {
+                if (x === trivia.q9[1]) {
+                    userScore += 1;
+                    questionCounter +=1;
+                    scoreTracker();
+                }
+                else {
+                    alert("wrong answer!");
+                    questionCounter += 1;
+                }
+                document.getElementById("questions").innerHTML = trivia.q10[0];
+            }
+            else if (questionCounter == 9) {
+                if (x === trivia.q1[1]) {
+                    userScore += 1;
+                    questionCounter = 0;
+                    scoreTracker();
+                }
+                else {
+                    alert("wrong answer!");
+                    questionCounter = 0;
+                }
+                document.getElementById("questions").innerHTML = "You have answered all the questions! Press 's' to start again!";
+            }
+        }
+*/
+
+        //Solution 2 Better Code I guess
+        var userScore2 = 0;
+        var questionCounter2 = -1;
+        document.onkeyup = function () { validation2(event.key) };
+
+        function validation2(e) {
+            let userKey = e.toLowerCase();
+            if (userKey === "s" && questionCounter2 == -1) {
+                document.getElementById("questions").innerHTML = trivia.q1[0];
+                userScore2 = 0;
+                scoreTracker2();
+                questionCounter2 = 0;
+            }
+            else if (userKey === "t" && questionCounter2 >= 0) {
+                var userResponse = true;
+                questionReader2(userResponse);
+            }
+            else if (userKey === "f" && questionCounter2 >= 0) {
+                var userResponse = false;
+                questionReader2(userResponse);
+            }
+            else {
+                document.getElementById("questions").innerHTML = "whoops! there seems to be an issue";
+            }
+        }
+        function questionReader2(x) {
+            console.log(questionCounter2);
+            let keys = Object.values(trivia);
+            if (x === keys[questionCounter2][1]) {
+                userScore2 += 1;
+                scoreTracker2();
+            }
+            else {
+                alert("wrong answer!")
+            }
+            questionCounterLogic2(keys);
+        }
+
+        function scoreTracker2() {
+            document.getElementById("score").innerHTML = "Your Score is " + userScore2 + " points.";
+        }
+        
+        function questionCounterLogic2(keys) {
+            if (questionCounter2 == 9){
+                questionCounter2 = -1;
+                document.getElementById("questions").innerHTML = "You have answered all the questions! Press 's' to start again!";
+            }
+            else {
+                questionCounter2 += 1;
+                document.getElementById('questions').innerHTML = keys[questionCounter2][0];
+            }
+        }
+    </script>
+</body>
+
+</html>
